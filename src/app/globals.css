@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------
+   AXONO design tokens
+   Brand colours are sampled directly from the AXONO logo:
+   blue  #2B7DB8 (gear + wordmark)   orange #F07D1A (replay arrow)
+   ------------------------------------------------------------------ */
+@theme {
+  --color-ink: #0b1726;
+  --color-ink-soft: #33465c;
+  --color-muted: #66778b;
+  --color-line: #e3e9f0;
+  --color-paper: #ffffff;
+  --color-mist: #f3f6fa;
+
+  --color-brand: #2b7db8;
+  --color-brand-deep: #1c5d8e;
+  --color-brand-tint: #e9f2fa;
+  --color-flare: #f07d1a;
+  --color-flare-deep: #d4660b;
+  --color-flare-tint: #fef1e6;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-manrope), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-cinema: cubic-bezier(0.65, 0, 0.35, 1);
+
+  --animate-marquee: marquee 40s linear infinite;
+  --animate-rec: rec 1.4s ease-in-out infinite;
+  --animate-kenburns: kenburns 12s ease-out infinite alternate;
+
+  @keyframes kenburns {
+    from { transform: scale(1) translate(0, 0); }
+    to { transform: scale(1.14) translate(-2%, -1.5%); }
+  }
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  @keyframes rec {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.25; }
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    @apply bg-paper text-ink font-sans antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  ::selection {
+    background: var(--color-flare);
+    color: white;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-flare);
+    outline-offset: 3px;
+  }
+}
+
+@layer components {
+  /* Clean, confident display type (Manrope, sentence case) */
+  .display {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.08;
+    text-wrap: balance;
+  }
+
+  /* Type scale — use these instead of ad-hoc sizes so every section lines up */
+  .h-hero,
+  .h-section,
+  .h-card {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.08;
+    text-wrap: balance;
+  }
+  .h-hero {
+    @apply text-[2.4rem] sm:text-5xl lg:text-[4rem] xl:text-[4.5rem];
+    line-height: 1.04;
+  }
+  .h-section {
+    @apply text-[2rem] sm:text-4xl lg:text-[2.9rem];
+  }
+  .h-card {
+    @apply text-xl md:text-2xl;
+    letter-spacing: -0.02em;
+  }
+
+  .section {
+    @apply py-20 md:py-28;
+  }
+
+  .container-x {
+    @apply mx-auto w-full max-w-[1440px] px-4 sm:px-8 lg:px-12;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-3 text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-brand;
+  }
+  .eyebrow::before {
+    content: "";
+    @apply block h-[2px] w-7 bg-flare;
+  }
+
+  .lead {
+    @apply text-base leading-relaxed text-ink-soft md:text-lg;
+  }
+
+  /* Signature text treatment: the orange replay underline */
+  .flare-underline {
+    background-image: linear-gradient(var(--color-flare), var(--color-flare));
+    background-repeat: no-repeat;
+    background-size: 100% 0.12em;
+    background-position: 0 92%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

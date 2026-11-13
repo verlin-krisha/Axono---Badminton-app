@@ -1,0 +1,28 @@
+{
+  "name": "axono-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AXONO — multi-sport automated match recording. Marketing website.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "build:static": "node -e \"process.env.STATIC_EXPORT='1';require('child_process').execSync('next build',{stdio:'inherit',env:process.env})\""
+  },
+  "dependencies": {
+    "framer-motion": "^14.13.0",
+    "lucide-react": "^1.72.0",
+    "next": "^16.4.6",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.5",
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "tailwindcss": "^4.3.5",
+    "typescript": "^7.0.2"
+  }
+}
