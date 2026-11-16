@@ -20,8 +20,8 @@ const slides = [
   },
   {
     title: 'GameTape: Every Game, Ready to Relive',
-    description: 'Cameras at the venue record every game automatically. Players scan the QR code at their court to watch and download their match.',
-    image: '/images/sports_slide3.webp',
+    description: 'Cameras at the venue record every game. Players scan the QR code at their court to watch and download their match.',
+    image: '/images/sports_slide4.webp',
     badge: 'GameTape',
     link: '/solutions/sports',
   },
@@ -287,7 +287,7 @@ export default function Home() {
             <div className="reveal reveal-delay-3">
               <SolutionCard
                 title="GameTape"
-                description="Automated match recording for sports venues. Players scan a QR code at the court to watch and download their game."
+                description="Match recording for sports venues. Players scan a QR code at the court to watch and download their game."
                 href="/solutions/sports"
                 features={['Badminton, cricket, football, pickleball & padel', 'QR access to every match', 'Watch and download on any phone']}
                 image="/images/sports_card3.webp"

@@ -62,7 +62,7 @@ export default function SportsSolution() {
               Every match recorded. Replay it with one scan.
             </h1>
             <p className="text-lg text-neutral-300 leading-relaxed mb-8 max-w-lg">
-              Cameras installed at your sports venue record every game automatically. After the match, players scan the QR code at the court to watch and download their game.
+              Cameras installed at your sports venue record every game. After the match, players scan the QR code at the court to watch and download their game.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link to="/contact" className="btn-primary px-7 py-3.5 text-sm group">
@@ -133,7 +133,7 @@ export default function SportsSolution() {
               </h2>
               <div className="space-y-8">
                 {[
-                  { num: '01', title: 'Play', desc: 'Players book their court and play as usual. Cameras installed at the venue record the match automatically — no one has to press record.' },
+                  { num: '01', title: 'Play', desc: 'Players book their court and play as usual. Cameras installed at the venue record the match.' },
                   { num: '02', title: 'Scan', desc: 'When the game ends, players scan the QR code displayed at their court or playing area with their phone camera.' },
                   { num: '03', title: 'Relive', desc: 'The match recording opens on their phone. They can watch their best moments and download the full game to keep or share.' },
                 ].map((s) => (
@@ -152,8 +152,8 @@ export default function SportsSolution() {
             <div className="relative reveal-right">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="/images/sports_how3.webp"
-                  alt="The match records automatically, players scan the court QR code, and the recording downloads to their phone"
+                  src="/images/sports_how4.webp"
+                  alt="The match is recorded, players scan the court QR code, and the recording downloads to their phone"
                   className="w-full h-96 object-cover"
                 />
               </div>
@@ -172,12 +172,12 @@ export default function SportsSolution() {
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { icon: Video, title: 'Every moment captured', desc: 'Matches are recorded automatically from start to finish, so no rally, shot or goal is missed.' },
+              { icon: Video, title: 'Every moment captured', desc: 'Matches are recorded from start to finish, so no rally, shot or goal is missed.' },
               { icon: QrCode, title: 'Simple QR access', desc: 'Players scan the code at their court to reach their recording — no complicated steps.' },
               { icon: Smartphone, title: 'Watch on any phone', desc: 'Recordings open right on the player\'s phone, ready to watch the moment the game ends.' },
               { icon: Download, title: 'Easy downloads', desc: 'Download the full match to keep it, share it with friends or send it to a coach.' },
               { icon: Layers, title: 'Multiple sports', desc: 'Badminton, turf cricket, turf football, pickleball and padel — one experience across every sport.' },
-              { icon: Wrench, title: 'Installed and managed by Axono', desc: 'Our team handles camera installation and setup at the venue, so there\'s nothing for your staff to run.' },
+              { icon: Wrench, title: 'Installed and managed by Axono', desc: 'Our team handles camera installation and setup at the venue.' },
             ].map((f, i) => (
               <div key={f.title} className={`reveal reveal-delay-${(i % 3) + 1} bg-white rounded-2xl p-6 border border-neutral-200 shadow-sm card-hover`}>
                 <div className="w-10 h-10 bg-teal-50 rounded-lg flex items-center justify-center mb-4">
@@ -203,7 +203,7 @@ export default function SportsSolution() {
                 Bring your venue<br />into the game
               </h2>
               <p className="text-neutral-400 leading-relaxed mb-8">
-                Give your customers an experience worth coming back for. With Axono, sports venues can offer automated match recording and convenient video access, making every booking more memorable.
+                Give your customers an experience worth coming back for. With Axono, sports venues can offer match recording and convenient video access, making every booking more memorable.
               </p>
               <ul className="space-y-4 mb-10">
                 {[

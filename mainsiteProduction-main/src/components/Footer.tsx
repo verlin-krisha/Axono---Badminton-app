@@ -22,7 +22,7 @@ export default function Footer() {
               <img src="/axono-logo-hd.png" alt="Axono" className="h-7 w-auto" />
             </div>
             <p className="text-sm leading-relaxed mb-4 max-w-xs text-neutral-500">
-              Remote monitoring solutions for water metering and agriculture, and automated match recording for sports venues. We build our own hardware and manage the entire system.
+              Remote monitoring solutions for water metering and agriculture, and match recording for sports venues. We build our own hardware and manage the entire system.
             </p>
           </div>
 
